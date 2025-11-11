@@ -9,7 +9,7 @@ def main() -> None:
     parser.add_argument("--from", dest="from_currency", required=True, help="Source currency code, e.g., BRL")
     parser.add_argument("--to", dest="to_currency", required=True, help="Target currency code, e.g., USD")
     parser.add_argument("--date", type=str, default=None, help="Optional historical date YYYY-MM-DD")
-    parser.add_argument("--provider", type=str, default="exchangerate", choices=["exchangerate"], help="FX provider")
+    parser.add_argument("--provider", type=str, default="erapi", choices=["erapi"], help="FX provider (no API key)")
 
     args = parser.parse_args()
     req = ConversionRequest(
