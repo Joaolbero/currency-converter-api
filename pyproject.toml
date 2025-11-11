@@ -1,0 +1,11 @@
+[project]
+name = "currency-converter"
+version = "0.1.0"
+description = "Currency converter CLI using public FX API"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "João Vitor Albero"}]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+addopts = "-q"
