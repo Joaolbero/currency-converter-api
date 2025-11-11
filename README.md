@@ -9,7 +9,7 @@
 Python project featuring a modern CLI, currency listing, and automatic provider fallback.
 No virtual environment required.
 Uses free and public APIs: ER-API
- and Frankfurter
+and Frankfurter
 .
 
 Highlights
