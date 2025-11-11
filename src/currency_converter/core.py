@@ -1,7 +1,7 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 from dataclasses import dataclass
 from typing import Optional
-from .api import RateProvider, ExchangerateHostProvider, ConvertResult
+from .api import RateProvider, OpenERAPIProvider, ConvertResult
 
 @dataclass
 class ConversionRequest:
@@ -9,11 +9,11 @@ class ConversionRequest:
     from_currency: str
     to_currency: str
     date: Optional[str] = None
-    provider: str = "exchangerate"
+    provider: str = "erapi"  # padrão sem API key
 
 def get_provider(name: str) -> RateProvider:
-    if name == "exchangerate":
-        return ExchangerateHostProvider()
+    if name == "erapi":
+        return OpenERAPIProvider()
     raise ValueError(f"Unknown provider: {name}")
 
 def convert(req: ConversionRequest) -> ConvertResult:

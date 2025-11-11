@@ -1,13 +1,11 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 import requests
 from typing import Optional, TypedDict
-
 
 class ConvertResult(TypedDict):
     rate: float
     date: str
     result: float
-
 
 class RateProvider:
     def convert(
@@ -19,12 +17,9 @@ class RateProvider:
     ) -> ConvertResult:
         raise NotImplementedError
 
-
 class OpenERAPIProvider(RateProvider):
     """
     Usa https://open.er-api.com/ (sem API key).
-    Suporta BRL, USD, EUR etc. Não tem histórico real; se 'date' vier,
-    a conversão vai usar a cotação mais recente assim mesmo.
     """
     BASE = "https://open.er-api.com/v6"
 
@@ -56,8 +51,6 @@ class OpenERAPIProvider(RateProvider):
 
         return {"rate": rate, "date": date_val, "result": result}
 
-
-# Deixo mapeado caso no futuro você queira voltar pra exchangerate.host com chave
 PROVIDERS = {
     "erapi": OpenERAPIProvider,
 }
