@@ -1,73 +1,76 @@
-# 💱 Conversor de Moedas com API / Currency Converter (API)
+<p align="center">
+  <img src="./icon/icon.png" alt="Project Icon" width="200" height="200">
+</p>
 
-> Projeto em Python com **CLI estilizada**, **listagem de moedas** e **fallback automático de provedores**.  
-> Sem ambiente virtual (*No venv*).  
-> API pública e gratuita: [ER-API](https://open.er-api.com/) + [Frankfurter](https://www.frankfurter.app/).
+# 💱 Currency Converter API / Conversor de Moedas via API
 
-🇺🇸 English Summary
-
-Python project featuring a modern CLI, currency listing, and automatic provider fallback.
-No virtual environment required.
-Uses free and public APIs: ER-API
-and Frankfurter
-.
-
-Highlights
-
-Real-time currency conversion
-
-Automatic fallback: ER-API → Frankfurter
-
---list command to show all supported currencies
-
-Styled CLI using Rich
-
---plain option for simple text output
-
-Fully tested with Pytest
-
-Example commands
-python -m currency_converter.cli --amount 100 --from BRL --to USD
-python -m currency_converter.cli --amount 50 --from USD --to JPY --date 2024-12-31
-python -m currency_converter.cli --list
+<p align="center">
+  <img src="https://img.shields.io/badge/STATUS-active-brightgreen?style=for-the-badge">
+  <img src="https://img.shields.io/badge/PROJECT_TYPE-automation-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/TECH_STACK-Python_3.10+-yellow?style=for-the-badge">
+  <img src="https://img.shields.io/badge/DEPENDENCIES-requests,_rich,_pytest-purple?style=for-the-badge">
+  <img src="https://img.shields.io/badge/FEATURES-CLI,_Fallback,_Currency_List-lightgrey?style=for-the-badge">
+  <img src="https://img.shields.io/badge/LICENSE-MIT-orange?style=for-the-badge">
+  <img src="https://img.shields.io/badge/VERSION-1.0.0-red?style=for-the-badge">
+  <a href="https://github.com/Joaolbero">
+    <img src="https://img.shields.io/badge/AUTHOR-João_Albero-black?style=for-the-badge">
+  </a>
+  <img src="https://img.shields.io/github/last-commit/Joaolbero/currency-converter-api?style=for-the-badge">
+</p>
 
 ---
 
-## 🇧🇷 Funcionalidades / 🇺🇸 Features
-✅ Conversão de moedas com cotação atual / Real-time currency conversion  
-✅ Fallback automático ER-API → Frankfurter / Automatic fallback between APIs  
-✅ Listagem de moedas disponíveis (`--list`) / List all supported currencies  
-✅ CLI com Rich (painéis e cores) / Styled CLI with colors  
-✅ Opção `--plain` para saída simples / Plain text output  
-✅ Testes automatizados com Pytest / Automated testing with Pytest  
+## 📄 Descrição / Description
+
+| 🇧🇷 **Descrição (PT-BR)** | 🇺🇸 **Description (EN)** |
+| --- | --- |
+| Conversor de moedas via linha de comando (CLI) com fallback automático entre provedores (**ER-API → Frankfurter**). Suporta listagem de moedas, conversão por data, saída estilizada com `rich` ou modo simples (`--plain`) e inclui testes automatizados com Pytest. | Command-line currency converter with automatic provider fallback (**ER-API → Frankfurter**). Supports currency listing, date-based conversion, styled output using `rich`, simple mode (`--plain`), and automated tests using Pytest. |
 
 ---
 
-## ⚙️ Requisitos / Requirements
-**Python 3.10+**
+## ✨ Funcionalidades / Features
 
-📦 Bibliotecas / Dependencies:
-```bash
-python -m pip install --user requests rich pytest
+| 🇧🇷 **Recursos (PT-BR)** | 🇺🇸 **Features (EN)** |
+| --- | --- |
+| • Conversão de moedas em tempo real<br>• Fallback automático ER-API → Frankfurter<br>• Listagem de moedas disponíveis (`--list`)<br>• CLI estilizada com `rich`<br>• Opção `--plain` para saída simples<br>• Conversão com data específica<br>• Testes automatizados com Pytest | • Real-time currency conversion<br>• Automatic fallback ER-API → Frankfurter<br>• Currency listing (`--list`)<br>• Styled CLI using `rich`<br>• `--plain` option for minimal output<br>• Date-based conversion<br>• Automated tests with Pytest |
 
-🚀 Uso / Usage
-💰 Conversão padrão / Standard conversion
-python -m currency_converter.cli --amount 100 --from BRL --to USD
+---
 
-🗓️ Data específica / Specific date
-python -m currency_converter.cli --amount 50 --from USD --to JPY --date 2024-12-31
+## 🧩 Instalação / Installation
 
-🧾 Saída sem Rich / Without Rich formatting
-python -m currency_converter.cli --amount 100 --from EUR --to GBP --plain
+| 🇧🇷 **Instalação (PT-BR)** | 🇺🇸 **Installation (EN)** |
+| --- | --- |
+| Instale as dependências globalmente (sem venv). | Install the required dependencies globally (no virtual environment needed). |
 
-🌍 Listar moedas disponíveis / List available currencies
-python -m currency_converter.cli --list
+### 📥 Passos
 
-🔄 Provedor alternativo / Alternative provider
-python -m currency_converter.cli --list --provider frankfurter
+    python -m pip install --user requests rich pytest
 
-🧪 Testes / Tests
-python -m pytest -q
+---
 
-✅ Esperado / Expected: 1 passed in X.XXs
+## 🚀 Uso / Usage
 
+### 💰 Conversão padrão / Standard conversion  
+    python -m currency_converter.cli --amount 100 --from BRL --to USD
+
+### 🗓️ Conversão com data / Date-based conversion  
+    python -m currency_converter.cli --amount 50 --from USD --to JPY --date 2024-12-31
+
+### 🧾 Saída simples / Plain output  
+    python -m currency_converter.cli --amount 100 --from EUR --to GBP --plain
+
+### 🌍 Listagem de moedas / Currency list  
+    python -m currency_converter.cli --list
+
+### 🔄 Selecionar provedor / Select provider  
+    python -m currency_converter.cli --list --provider frankfurter
+
+### 🧪 Testes / Tests  
+    python -m pytest -q
+
+---
+
+## 👤 Autor | Author  
+
+Criado por João Albero · 2025  
+Created by João Albero · 2025
